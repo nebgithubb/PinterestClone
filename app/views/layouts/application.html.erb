@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'home/header' %>
 
-<%= yield %>
+<div class="container">
+<div class="alert alert-success" role="alert"><strong>Welcome! You have signed up successfully.</strong></div>
+<% flash.each do /name, msg/ %>
+
+    <% end %>
+
+  <%= yield %>
+  </div>
 
 </body>
 </html>
